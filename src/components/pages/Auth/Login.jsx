@@ -83,7 +83,6 @@ const Login = () => {
             </span>
           </div>
         </div>
-        console.log('This is test change')
         {/* Form - Show only after role selected */}
         {role && (
           <form className="flex flex-col w-full gap-4" onSubmit={handleSubmit}>
@@ -110,9 +109,9 @@ const Login = () => {
 
             {/* Submit Button */}
             <div className="mt-6">
-              <Button type="submit" className="w-full text-lg md:text-xl py-3">
-                LOGIN
-              </Button>
+              <button type="submit" className="w-full text-lg md:text-xl py-3">
+                LOGIN button
+              </button>
             </div>
 
             {/* Link to Register */}
