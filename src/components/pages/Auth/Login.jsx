@@ -40,7 +40,6 @@ const Login = () => {
             Welcome to SSM
           </h1>
         </div>
-
         {/* Role Selector */}
         <div className="w-full">
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -84,7 +83,7 @@ const Login = () => {
             </span>
           </div>
         </div>
-
+        console.log('This is test change')
         {/* Form - Show only after role selected */}
         {role && (
           <form className="flex flex-col w-full gap-4" onSubmit={handleSubmit}>
