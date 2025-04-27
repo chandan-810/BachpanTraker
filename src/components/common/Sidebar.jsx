@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../../../public/logo.png";
 
 function Sidebar() {
   const components = [
