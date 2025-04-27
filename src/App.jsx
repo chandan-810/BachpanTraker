@@ -4,7 +4,6 @@ import Login from "./components/auth/LoginForm";
 import Register from "./components/pages/Auth/Register";
 import { Route, Routes } from "react-router-dom";
 import Sidebar from "./components/common/Sidebar";
-import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
