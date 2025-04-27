@@ -3,6 +3,7 @@ import Input from "../../common/Input";
 import Button from "../../common/Button";
 import { IoMdPerson } from "react-icons/io";
 import { RiAdminFill, RiParentFill } from "react-icons/ri";
+import Logo from "../../../assets/logo.png";
 
 const Login = () => {
   const [role, setRole] = useState(""); // Role select karne ke liye
@@ -34,7 +35,7 @@ const Login = () => {
       <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-8 flex flex-col items-center">
         {/* Logo and Title */}
         <div className="flex flex-col items-center mb-6">
-          <img src="./logo.png" alt="Logo" className="h-24 mb-4" />
+          <img src={Logo} alt="Logo" className="h-24 mb-4" />
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Welcome to SSM
           </h1>
