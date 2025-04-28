@@ -5,16 +5,12 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
-      <div className=" shadow-md outline-black outline-2 dark:outline-white rounded-lg px-8 pt-6 pb-8 mb-4">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-          Welcome!
-        </h1>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
+      <div className=" shadow-md outline-black outline-2 rounded-lg px-8 pt-6 pb-8 mb-4">
+        <h1 className="text-2xl font-bold text-gray-800  mb-4">Welcome!</h1>
+        <p className="text-gray-700  mb-4">
           This page is currently under development.
         </p>
-        <p className="text-gray-700 dark:text-gray-300 mb-2">
-          Check out these routes:
-        </p>
+        <p className="text-gray-700  mb-2">Check out these routes:</p>
         <nav className="flex space-x-4">
           <Link
             to="/login"

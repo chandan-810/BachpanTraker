@@ -30,19 +30,17 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-blue-100 dark:bg-gray-900 transition-colors duration-300">
-      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-8 flex flex-col items-center">
+    <div className="min-h-screen flex items-center justify-center bg-blue-100 transition-colors duration-300">
+      <div className="w-full max-w-md bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center">
         {/* Logo and Title */}
         <div className="flex flex-col items-center mb-6">
           <img src="./logo.png" alt="Logo" className="h-24 mb-4" />
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-            Welcome to SSM
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900">Welcome to SSM</h1>
         </div>
 
         {/* Role Selector */}
         <div className="w-full">
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             {role ? "Selected Role:" : "Please Select Your Role:"}
           </label>
           <div className="flex justify-around mb-6">
@@ -50,8 +48,8 @@ const Login = () => {
               onClick={() => handleRoleSelect("Teacher")}
               className={`flex flex-col items-center cursor-pointer transition ${
                 role === "Teacher"
-                  ? "text-blue-600 dark:text-blue-400 font-bold"
-                  : "text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  ? "text-blue-600  font-bold"
+                  : "text-gray-700 hover:text-black "
               }`}
             >
               <IoMdPerson size={28} />
@@ -62,8 +60,8 @@ const Login = () => {
               onClick={() => handleRoleSelect("Parent")}
               className={`flex flex-col items-center cursor-pointer transition ${
                 role === "Parent"
-                  ? "text-blue-600 dark:text-blue-400 font-bold"
-                  : "text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  ? "text-blue-600  font-bold"
+                  : "text-gray-700 hover:text-black"
               }`}
             >
               <RiParentFill size={28} />
@@ -74,8 +72,8 @@ const Login = () => {
               onClick={() => handleRoleSelect("Admin")}
               className={`flex flex-col items-center cursor-pointer transition ${
                 role === "Admin"
-                  ? "text-blue-600 dark:text-blue-400 font-bold"
-                  : "text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  ? "text-blue-600 font-bold"
+                  : "text-gray-700 hover:text-black"
               }`}
             >
               <RiAdminFill size={28} />
@@ -116,12 +114,9 @@ const Login = () => {
             </div>
 
             {/* Link to Register */}
-            <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-4">
+            <p className="text-center text-sm text-gray-600  mt-4">
               Don't have an account?{" "}
-              <a
-                href="/register"
-                className="text-blue-600 hover:underline dark:text-blue-400"
-              >
+              <a href="/register" className="text-blue-600 hover:underline">
                 Register
               </a>
             </p>

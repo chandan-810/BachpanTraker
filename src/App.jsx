@@ -7,7 +7,7 @@ import Register from "./components/pages/Auth/Register";
 
 function App() {
   return (
-    <div className="font-figtree min-w-screen bg-blue-50 min-h-screen flex flex-col  dark:bg-gray-800 transition-colors duration-300">
+    <div className="font-figtree min-w-screen bg-blue-50 min-h-screen flex flex-col transition-colors duration-300">
       <Routes>
         <Route index element={<Home />}></Route>
         <Route path="/login" element={<Login />}></Route>
