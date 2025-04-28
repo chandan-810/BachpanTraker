@@ -3,6 +3,7 @@ import Input from "../../common/Input";
 import Button from "../../common/Button";
 import { IoMdPerson } from "react-icons/io";
 import { RiAdminFill, RiParentFill } from "react-icons/ri";
+import Logo from "../../../assets/logo.png";
 
 const Register = () => {
   const [role, setRole] = useState(""); // Initially no role
@@ -84,6 +85,7 @@ const Register = () => {
             <Input
               name="fullName"
               type="text"
+              minLength="3"
               placeholder="Full Name"
               value={formData.fullName}
               onChange={handleChange}
@@ -104,6 +106,7 @@ const Register = () => {
             <Input
               name="password"
               type="password"
+              minLength="6"
               placeholder="Password"
               value={formData.password}
               onChange={handleChange}
@@ -111,10 +114,13 @@ const Register = () => {
             />
 
             {/* Submit Button */}
-            <div className="mt-6">
-              <Button className="w-full text-lg md:text-xl py-3">
+            <div className="mt-6 bg-blue-500 rounded-2xl flex justify-end mr-44 text-white">
+              <button
+                type="submit"
+                className="cursor-pointer w-full text-lg md:text-xl py-2 "
+              >
                 REGISTER
-              </Button>
+              </button>
             </div>
 
             {/* Link to Login */}
