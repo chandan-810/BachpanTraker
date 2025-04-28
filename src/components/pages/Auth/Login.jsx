@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
 import Input from "../../common/Input";
-import Button from "../../common/Button";
+// import Button from "../../common/Button";
 import { IoMdPerson } from "react-icons/io";
 import { RiAdminFill, RiParentFill } from "react-icons/ri";
 import Logo from "../../../assets/logo.png";
@@ -85,8 +85,9 @@ const Login = () => {
         </div>
         {/* Form - Show only after role selected */}
         {role && (
-          <form className="flex flex-col w-full gap-4" onSubmit={handleSubmit}>
+          <form className="flex flex-col w-full gap-4 " onSubmit={handleSubmit}>
             <Input
+              className="border border-gray-600 "
               name="mobile"
               type="tel"
               minLength="10"
@@ -99,8 +100,10 @@ const Login = () => {
               required
             />
             <Input
+              className="border border-gray-600"
               name="password"
               type="password"
+              minLength="6"
               placeholder="Password"
               value={formData.password}
               onChange={handleChange}
@@ -108,9 +111,12 @@ const Login = () => {
             />
 
             {/* Submit Button */}
-            <div className="mt-6">
-              <button type="submit" className="w-full text-lg md:text-xl py-3">
-                LOGIN button
+            <div className="mt-6 bg-blue-500 rounded-2xl flex justify-end mr-44 text-white">
+              <button
+                type="submit"
+                className="cursor-pointer w-full text-lg md:text-xl py-2 "
+              >
+                LOGIN
               </button>
             </div>
 
