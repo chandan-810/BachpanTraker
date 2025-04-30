@@ -25,10 +25,10 @@ const Home = () => {
             Register
           </Link>
           <Link
-            to="/sidebar"
+            to="/teacher/dashboard"
             className="bg-indigo-500 hover:bg-indigo-700  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            Sidebar
+            Teacher Dashboard
           </Link>
         </nav>
       </div>

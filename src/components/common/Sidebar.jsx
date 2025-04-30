@@ -1,28 +1,34 @@
 import React from "react";
+import { Link, useParams } from "react-router-dom";
 
-function Sidebar() {
-  const components = [
-    "Dashboard",
-    "Attendance",
-    "Homework",
-    "Students",
-    "Messages",
-    "Reports",
-  ];
+function Sidebar({ btns }) {
+  // console.log(btns);
+  const params = useParams();
+  const page = params.route;
 
   return (
     <div>
-      <div className="h-screen w-50 bg-gray-100  left-0 top-0 p-4">
+      <div className="h-screen w-50 bg-sky-50 left-0 top-0 p-4">
         <div className="space-y-4">
           <nav className="space-y-4">
-            {components.map((component, index) => (
-              <a
-                key={index}
-                className="cursor-pointer block px-4 py-2 text-gray-600  hover:bg-gray-200  rounded-md transition-colors"
-              >
-                {component}
-              </a>
-            ))}
+            {btns.map((btn, index) => {
+              let selected = false;
+              if (page == btn.Title.toLowerCase()) {
+                selected = true;
+              }
+              return (
+                <Link
+                  key={index}
+                  to={btn.To}
+                  className={
+                    "cursor-pointer block px-4 py-2 text-gray-600 duration-100 hover:bg-sky-100  rounded-md transition-colors " +
+                    (selected ? " bg-sky-100" : "")
+                  }
+                >
+                  {btn.Title}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       </div>

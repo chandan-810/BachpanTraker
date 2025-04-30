@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Sidebar from "./components/common/Sidebar";
 import Login from "./components/pages/Auth/Login";
 import Register from "./components/pages/Auth/Register";
+import Teacher from "./components/pages/Teacher/Teacher";
+import NotFound from "./components/common/NotFound";
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
         <Route index element={<Home />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/sidebar" element={<Sidebar />}></Route>
+        <Route path="/teacher/:route" element={<Teacher />}></Route>
+        <Route path="*" element={<NotFound redirectTo="/" />}></Route>
       </Routes>
     </div>
   );
