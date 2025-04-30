@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdMenu } from "react-icons/md";
+import { MdClose, MdMenu } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 
 function Sidebar({ btns }) {
@@ -17,7 +17,7 @@ function Sidebar({ btns }) {
     <div>
       <div className="md:hidden duration-100 hover:scale-125 z-10 m-5 right-0 top-0 fixed">
         <button onClick={handleSidebar}>
-          <MdMenu size={20} />
+          {showSidebar ? <MdClose size={20} /> : <MdMenu size={20} />}
         </button>
       </div>
       <div className="min-h-screen hidden h-full md:inline-block shadow-2xl w-50 bg-sky-50 left-0 top-0 p-4">
@@ -44,6 +44,12 @@ function Sidebar({ btns }) {
           </nav>
         </div>
       </div>
+      {showSidebar && (
+        <div
+          onClick={handleSidebar}
+          className="h-full w-full fixed top-0 bottom-0 left-0 right-0 z-30"
+        ></div>
+      )}
       {showSidebar && (
         <div className="min-h-full duration-100 backdrop-blur-3xl fixed top-0 bottom-0 left-0 z-50 h-full md:hidden shadow-2xl w-50 bg-sky-50 p-4">
           <div className="space-y-4">
