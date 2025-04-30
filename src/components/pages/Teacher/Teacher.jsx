@@ -15,7 +15,7 @@ const Teacher = () => {
   const page = params.route;
 
   return (
-    <div className="flex">
+    <div className="flex h-full">
       <Sidebar
         btns={[
           { Title: "Dashboard", To: "/teacher/dashboard" },
@@ -26,6 +26,7 @@ const Teacher = () => {
           { Title: "Reports", To: "/teacher/reports" },
         ]}
       />
+
       <>
         {page == "dashboard" ? (
           <Dashboard />

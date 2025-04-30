@@ -16,7 +16,7 @@ const Dashboard = () => {
         <h1 className="text-xl mb-4 md:text-2xl font-bold text-gray-800">
           Teacher Dashboard
         </h1>
-        <div className="flex flex-wrap gap-5">
+        <div className="flex flex-wrap justify-center items-center md:justify-start gap-5">
           <div className="bg-blue-300 hover:scale-95 duration-75 flex flex-col items-center justify-center h-40 w-56 p-5 rounded-4xl border shadow-2xl border-blue-500">
             <h2 className="text-xl text-blue-900 font-semibold">
               Mark Attendance
